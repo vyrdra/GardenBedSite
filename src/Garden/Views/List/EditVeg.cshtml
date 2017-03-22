@@ -1,0 +1,88 @@
+﻿@model Vegtable
+@{
+    ViewBag.Title = "Edit Vegtable";
+    Layout = "_ListLayout";
+}
+
+<div class="row" id="editVegDiv">
+    <div class="col-lg-3"></div>
+    <div class="col-lg-6">
+        <form asp-action="EditVeg" method="post">
+            <input type="hidden" asp-for="VegId" />
+            <div class="form-group">
+                <label asp-for="VegName"></label>
+                <input asp-for="VegName" class="form-control" />
+            </div>
+            <div class="form-group">
+                <label asp-for="VegFamily"></label>
+                <input asp-for="VegFamily" class="form-control" />
+            </div>
+            <div class="form-group">
+                <label asp-for="SeedDepth"></label>
+                <input asp-for="SeedDepth" class="form-control" />
+            </div>
+            <div class="form-group">
+                <label asp-for="SeedSpacing"></label>
+                <input asp-for="SeedSpacing" class="form-control" />
+            </div>
+            <div class="form-group">
+                <label asp-for="ThinTo"></label>
+                <input asp-for="ThinTo" class="form-control" />
+            </div>
+            <div class="form-group">
+                <label asp-for="PlantsPerFt"></label>
+                <input asp-for="PlantsPerFt" class="form-control" />
+            </div>
+            <div class="form-group">
+                <label asp-for="RowDistance"></label>
+                <input asp-for="RowDistance" class="form-control" />
+            </div>
+            <div class="form-group">
+                <label asp-for="IndoorSow"></label>
+                <input asp-for="IndoorSow" class="form-control" />
+            </div>
+            <div class="form-group">
+                <label asp-for="SoilTemp"></label>
+                <input asp-for="SoilTemp" class="form-control" />
+            </div>
+            <div class="form-group">
+                <label asp-for="FertilizerNeeds"></label>
+                <input asp-for="FertilizerNeeds" class="form-control" />
+            </div>
+            <div class="form-group">
+                <label asp-for="Transplant"></label>
+                <input asp-for="Transplant" class="form-control" />
+            </div><div class="form-group">
+                <label asp-for="InsectProbblems"></label>
+                <input asp-for="InsectProbblems" class="form-control" />
+            </div>
+            <div class="form-group">
+                <label asp-for="DiseaseProblems"></label>
+                <input asp-for="DiseaseProblems" class="form-control" />
+            </div>
+            <div class="form-group">
+                <label asp-for="DaysGerminationMin"></label>
+                <input asp-for="DaysGerminationMin" class="form-control" />
+            </div>
+            <div class="form-group">
+                <label asp-for="DaysGerminationMax"></label>
+                <input asp-for="DaysGerminationMax" class="form-control" />
+            </div>
+            <div class="form-group">
+                <label asp-for="Notes"></label>
+                <input asp-for="Notes" class="form-control" />
+            </div>
+
+            <div class="text-center">
+                <button class="btn btn-success" type="submit">Save</button>
+                <a asp-action="YourVeg" asp-controller="List" class="btn btn-default">Cancel</a>
+            </div>
+        </form>
+    </div>
+    <div class="col-lg-3"></div>
+    <div class="row">
+        <div class="container col-lg-12">
+            <br />
+        </div>
+    </div>
+</div>

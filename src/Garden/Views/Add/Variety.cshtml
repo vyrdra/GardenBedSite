@@ -1,0 +1,103 @@
+﻿@model Garden.Models.VegVariety
+@{
+    Layout = "_ListLayout";
+}
+
+<div class="col-md-3"></div>
+<div class="col-md-6">
+    <h2 class="text-center">Add a Variety</h2>
+    <h4 class="text-center">@ViewBag.Success</h4>
+    @*<div asp-validation-summary="All" class="text-danger"></div>*@
+    <form asp-controller="Add" asp-action="Variety" method="post" class="text-left" id="vegForm">
+        <input asp-for="VarietyId" type="hidden" />
+
+        <div class="row">
+            <div class="col-lg-4">
+                <div class="form-group">
+                    <label asp-for="VarietyName">Variety Name:</label><br />
+                    <input asp-for="VarietyName" class="form-control" />
+                    <span asp-validation-for="VarietyName" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="VegType.VegName">Vegtable Type:</label><br />
+                    <input asp-for="VegType.VegName" class="form-control" />
+                    <span asp-validation-for="VegType.VegName" class="text-danger"></span>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="SupplierName">Supplier Name:</label><br />
+                    <input asp-for="SupplierName" class="form-control" />
+                    @*<span asp-validation-for="SupplierName" class="text-danger"></span>*@
+                </div>
+                <div class="form-group">
+                    <label asp-for="Description">Description:</label><br />
+                    <input asp-for="Description" class="form-control" />
+                    @*<span asp-validation-for="Description" class="text-danger"></span>*@
+                </div>
+                
+
+            </div>
+
+            <div class="col-lg-4">
+                <div class="form-group">
+                    <label asp-for="YearPacked">Year seeds where packaged:</label><br />
+                    <input type="number" asp-for="YearPacked" class="form-control" />
+                    @*<span asp-validation-for="YearPacked" class="text-danger"></span>*@
+                </div>
+                
+                <div class="form-group">
+                    <label asp-for="DaysToHarvest">Estimated Days to Harvest</label><br />
+                    <input type="number" asp-for="DaysToHarvest" class="form-control" />
+                    @*<span asp-validation-for="DaysToHarvest" class="text-danger"></span>*@
+                </div>
+                <div class="form-group">
+                    <label asp-for="SpecialCharacteristics">Specialties of this variety:</label><br />
+                    <input asp-for="SpecialCharacteristics" class="form-control" />
+                    @*<span asp-validation-for="SpecialCharacteristics" class="text-danger"></span>*@
+                </div>
+                <div class="form-group ">
+                    <label asp-for="Notes">Extra Notes:</label><br />
+                    <textarea asp-for="Notes" class="form-control"></textarea>
+                </div>
+            </div>
+
+            <div class="col-lg-4">
+                <div class="form-group">
+                    <label asp-for="SpringPlant">Good for Spring Planting?</label><br />
+                    <input asp-for="SpringPlant" class="form-control" />
+                    @*<span asp-validation-for="SpringPlant" class="text-danger"></span>*@
+                </div>
+                <div class="form-group">
+                    <label asp-for="FallPlant">Good for Fall Planting?</label><br />
+                    <input asp-for="FallPlant"  class="form-control" />
+                    @*<span asp-validation-for="FallPlant" class="text-danger"></span>*@
+                </div>
+                <div class="form-group">
+                    <label asp-for="Organic">Organic Seed?</label><br />
+                    <input asp-for="Organic" class="form-control" />
+                    @*<span asp-validation-for="Organic" class="text-danger"></span>*@
+                </div>
+                <div class="form-group">
+                    <label asp-for="Heirloom">Heirloom Seed?</label><br />
+                    <input asp-for="Heirloom" class="form-control" />
+                    @*<span asp-validation-for="Heirloom" class="text-danger"></span>*@
+                </div>
+
+
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-4"></div>
+            <div class="col-lg-4 text-center">
+                <div class="form-group">
+                    <button type="submit" class="btn btn-success">Submit</button>
+                </div>
+            </div>
+            <div class="col-lg-4"></div>
+        </div>
+
+
+
+    </form>
+</div>
+<div class="col-md-3"></div>

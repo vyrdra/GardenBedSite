@@ -1,0 +1,132 @@
+﻿@model Garden.Models.Vegtable
+@{
+    Layout = "_ListLayout";
+}
+
+<div class="col-md-3"></div>
+<div class="col-md-6">
+    <h3 class="text-center">Add a Vegtable</h3>
+    <h5 class="text-center">@ViewBag.Success</h5>
+    @*<div asp-validation-summary="All" class="text-danger"></div>*@
+    
+        <form asp-controller="Add" asp-action="Vegtable" method="post" class="text-left" id="vegForm">
+            <input asp-for="VegId" type="hidden" />
+
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="form-group">
+                        <label asp-for="VegName">Vegtable Name:</label><br />
+                        <input asp-for="VegName" class="form-control" />
+                        <span asp-validation-for="VegName" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="VegFamily">Vegtable Family:</label><br />
+                        <input asp-for="VegFamily" class="form-control" />
+                        @*<span asp-validation-for="VegFamily" class="text-danger"></span>*@
+                    </div>
+
+                    <div class="form-group">
+                        <label asp-for="SeedDepth">Seed Depth:</label><br />
+                        <input asp-for="SeedDepth" class="form-control" />
+                        @*<span asp-validation-for="SeedDepth" class="text-danger"></span>*@
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="SeedSpacing">Seed Spacing:</label><br />
+                        <input asp-for="SeedSpacing" class="form-control" />
+                        @*<span asp-validation-for="SeedSpacing" class="text-danger"></span>*@
+                    </div>
+                    
+                    <div class="form-group">
+                        <label asp-for="DaysGerminationMin">Min Days to Germination:</label><br />
+                        <input type="number" asp-for="DaysGerminationMin" class="form-control" />
+                        @*<span asp-validation-for="DaysGerminationMin" class="text-danger"></span>*@
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="DiseaseProblems">What diseases can this plant get?</label><br />
+                        <input asp-for="DiseaseProblems" class="form-control" />
+                        @*<span asp-validation-for="DiseaseProblems" class="text-danger"></span>*@
+                    </div>
+
+                    
+                </div>
+
+                <div class="col-lg-4">
+                    <div class="form-group">
+                        <label asp-for="FullSun">Does the plant need full sun?</label><br />
+                        <input asp-for="FullSun" type="checkbox" class="form-control" />
+                        @*<span asp-validation-for="FullSun" class="text-danger"></span>*@
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="PlantsPerFt">Number of plants per foot:</label><br />
+                        <input type="number" asp-for="PlantsPerFt" class="form-control" />
+                        @*<span asp-validation-for="PlantsPerFt" class="text-danger"></span>*@
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="RowDistance">Distance between rows (in):</label><br />
+                        <input type="number" asp-for="RowDistance" class="form-control" />
+                        @*<span asp-validation-for="RowDistance" class="text-danger"></span>*@
+                    </div>
+
+
+                    <div class="form-group">
+                        <label asp-for="SoilTemp">Soil Temp:</label><br />
+                        <input asp-for="SoilTemp" class="form-control" />
+                       @* <span asp-validation-for="SoilTemp" class="text-danger"></span>*@
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="FertilizerNeeds">What kind of fertilizer to use?</label><br />
+                        <input asp-for="FertilizerNeeds" class="form-control" />
+                        @*<span asp-validation-for="FertilizerNeeds" class="text-danger"></span>*@
+                    </div>
+                   
+                </div>
+
+                <div class="col-lg-4">
+                    <div class="form-group">
+                        <label asp-for="ThinTo">Thin Seeds To (in):</label><br />
+                        <input type="number" asp-for="ThinTo" class="form-control" />
+                        @*<span asp-validation-for="ThinTo" class="text-danger"></span>*@
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="IndoorSow">When to sow indoors?</label><br />
+                        <input asp-for="IndoorSow" class="form-control" />
+                        @*<span asp-validation-for="IndoorSow" class="text-danger"></span>*@
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Transplant">When to transplant?</label><br />
+                        <input asp-for="Transplant" class="form-control" />
+                        @*<span asp-validation-for="Transplant" class="text-danger"></span>*@
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="InsectProbblems">Possible Insect Problems:</label><br />
+                        <input asp-for="InsectProbblems" class="form-control" />
+                        @*<span asp-validation-for="InsectProbblems" class="text-danger"></span>*@
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="DaysGerminationMax">Max Days to Germination:</label><br />
+                        <input type="number" asp-for="DaysGerminationMax" class="form-control" />
+                        @*<span asp-validation-for="DaysGerminationMax" class="text-danger"></span>*@
+                    </div>
+                    <div class="form-group ">
+                        <label asp-for="Notes">Extra Notes:</label><br />
+                        <textarea asp-for="Notes" class="form-control"></textarea>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-4"></div>
+                <div class="col-lg-4">
+                    
+                    <div class="text-center">
+                        <div class="form-group">
+                            <button type="submit" class="btn btn-success">Submit</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4"></div>
+            </div>
+        </form>
+    
+</div>
+<div class="col-md-3"></div>
+

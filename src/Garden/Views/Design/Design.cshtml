@@ -1,0 +1,47 @@
+﻿@model GardenBed
+
+@{
+    Layout = "_ListLayout";
+}
+
+
+<div class="row">
+    <div class="col-lg-12"></div>
+</div>
+
+<div class="row">
+    <div class="col-med-4"> </div>
+    <div class="col-med-4 text-center">
+        @*TODO figure out how to send the length and width to the table....*@ 
+            <label class="form-inline " asp-for="BedWidth">How wide is the bed?</label>
+            <input asp-for="BedWidth" type="number" class="" />
+            <label class="form-inline" asp-for="BedLength">How long is the bed?</label>
+            <input asp-for="BedLength" type="number" />
+        
+
+        <br />
+        <p> This page didnt get done... :(</p>
+    </div>
+    <div class="col-med-4"></div>
+</div>
+<div class="row">
+    <div class="col-lg-3"></div>
+    <div class="col-lg-3">
+        <table class="table table-bordered">
+            @for (int i = 0; i < Model.BedWidth; i++)
+            {
+                <tr>
+                    @for(int j = 0; j < Model.BedLength; j++)
+                    {
+                        <td>
+
+                        </td>
+
+                    }
+                </tr>
+            }
+        </table>
+
+    </div>
+    <div class="col-lg-3"></div>
+</div>

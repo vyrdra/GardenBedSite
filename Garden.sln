@@ -1,0 +1,38 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{DA98A246-AE58-4D10-8E41-5A4158B1E68B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{EC19A376-D66A-4048-945C-08C65E913250}"
+	ProjectSection(SolutionItems) = preProject
+		global.json = global.json
+	EndProjectSection
+EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Garden", "src\Garden\Garden.xproj", "{FEB2AADC-3658-419F-9E5E-B18C543D0AE0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GardenTest", "GardenTest\GardenTest.csproj", "{E303CF2B-AA74-407B-B948-BCD060BFBC08}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FEB2AADC-3658-419F-9E5E-B18C543D0AE0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FEB2AADC-3658-419F-9E5E-B18C543D0AE0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FEB2AADC-3658-419F-9E5E-B18C543D0AE0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FEB2AADC-3658-419F-9E5E-B18C543D0AE0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E303CF2B-AA74-407B-B948-BCD060BFBC08}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E303CF2B-AA74-407B-B948-BCD060BFBC08}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E303CF2B-AA74-407B-B948-BCD060BFBC08}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E303CF2B-AA74-407B-B948-BCD060BFBC08}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{FEB2AADC-3658-419F-9E5E-B18C543D0AE0} = {DA98A246-AE58-4D10-8E41-5A4158B1E68B}
+	EndGlobalSection
+EndGlobal

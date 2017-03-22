@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+This file is used by the publish/package process of your Web project. You can customize the behavior of this process
+by editing this MSBuild file. In order to learn more about this please visit http://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <EncryptedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAmMMfAZcPwEOlBVL2OTH/+gAAAAACAAAAAAAQZgAAAAEAACAAAAAxR69J+CuEHfOTgnibFHwbc6+EWRaXodLfoLPBa/JQnwAAAAAOgAAAAAIAACAAAADmz/F5Yu3kagRMRJ1yCAeDuUqf8IXq7ZMMiJ6WD2p4RYAAAAByGt4FTIjcsB0b9PgV5oveR0juswCd02ByCUoLH6KskMdDGi3/HMwP27tHV7Ms9c0FxUMa7rzi2XK/y4jTK4lGAok64F3RO5lAn71YZC8TYle+BvTQH5uvT20KQQUN88fgqfMtKfU4i4eSvqc8xi4XqMdY/bDSzo8EQYo4IupVLkAAAAA/tiY318c4xg/OnUg1pJm+tOCc+SAvOoMH50OARbbemt1w7mPTiu89NCTuZ04i2ktFSUVKDLRuZNkovArmDK/H</EncryptedPassword>
+  </PropertyGroup>
+  <ItemGroup>
+    <EfMigrations Include="Garden.Repository.AppIdentityDbContext">
+      <Value>Server=tcp:gardenbedidentity.database.windows.net,1433;Initial Catalog=gardenbedIdentity;Persist Security Info=False;User ID=adminUser;Password=Rhasedi^78999;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;</Value>
+    </EfMigrations>
+    <EfMigrations Include="Garden.Repository.GardenDbContext">
+      <Value>Server=tcp:gardenb.database.windows.net,1433;Initial Catalog=gardenBedSite;Persist Security Info=False;User ID=adminUser;Password=Rhasedi^78999;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;</Value>
+    </EfMigrations>
+  </ItemGroup>
+</Project>

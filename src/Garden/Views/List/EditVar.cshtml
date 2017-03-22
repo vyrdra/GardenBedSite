@@ -1,0 +1,74 @@
+﻿@model VegVariety
+@{
+    ViewBag.Title = "Edit Vegtable";
+    Layout = "_ListLayout";
+}
+
+<div class="row" id="editVarDiv">
+    <div class="col-lg-3"></div>
+    <div class="col-lg-6">
+        <form asp-action="EditVar" method="post">
+            <input type="hidden" asp-for="VarietyId" />
+            <div class="form-group">
+                <label asp-for="VarietyName"></label>
+                <input asp-for="VarietyName" class="form-control" />
+            </div>
+            <div class="form-group">
+                <label asp-for="VegType.VegName"></label>
+                <input asp-for="VegType.VegName" class="form-control" />
+                <span asp-validation-for="VegType.VegName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SupplierName"></label>
+                <input asp-for="SupplierName" class="form-control" />
+            </div>
+            <div class="form-group">
+                <label asp-for="YearPacked"></label>
+                <input asp-for="YearPacked" class="form-control" />
+            </div>
+            <div class="form-group">
+                <label asp-for="Description"></label>
+                <input asp-for="Description" class="form-control" />
+            </div>
+            <div class="form-group">
+                <label asp-for="SpecialCharacteristics"></label>
+                <input asp-for="SpecialCharacteristics" class="form-control" />
+            </div>
+            <div class="form-group">
+                <label asp-for="DaysToHarvest"></label>
+                <input asp-for="DaysToHarvest" class="form-control" />
+            </div>
+            <div class="form-group">
+                <label asp-for="SpringPlant"></label>
+                <input asp-for="SpringPlant" class="form-control"/>
+            </div>
+            <div class="form-group">
+                <label asp-for="FallPlant"></label>
+                <input asp-for="FallPlant" class="form-control"/>
+            </div>
+            <div class="form-group">
+                <label asp-for="Organic"></label>
+                <input asp-for="Organic" class="form-control" />
+            </div>
+            <div class="form-group">
+                <label asp-for="Heirloom"></label>
+                <input asp-for="Heirloom" class="form-control"/>
+            </div>
+            <div class="form-group ">
+                <label asp-for="Notes">Extra Notes:</label><br />
+                <input asp-for="Notes" class="form-control" />
+            </div>
+
+            <div class="text-center">
+                <button class="btn btn-success" type="submit">Save</button>
+                <a asp-action="YourVeg" class="btn btn-default">Cancel</a>
+            </div>
+        </form>
+    </div>
+    <div class="col-lg-3"></div>
+    <div class="row">
+        <div class="container col-lg-12">
+            <br />
+        </div>
+    </div>
+</div>
